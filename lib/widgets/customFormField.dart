@@ -1,23 +1,37 @@
 import 'package:finance_app/common/variables/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomFormField extends StatefulWidget {
   final String? hintTxt;
   final String? labelTxt;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
-  final int? MaxLines;
-  final int? MaxLenght;
+  final int? maxLines;
+  final int? maxLenght;
   final TextInputAction? txtInputAction;
+  final EdgeInsetsGeometry? padding;
+  final TextCapitalization? txtCapitalization;
+  final Widget? suffixIcon;
+  final bool? obscureTxt;
+  final List<TextInputFormatter>? inputFormatter;
+  final FormFieldValidator<String>? validator;
+
   const CustomFormField({
     Key? key,
     this.hintTxt,
     this.labelTxt,
     this.controller,
     this.keyboardType,
-    this.MaxLines,
-    this.MaxLenght,
+    this.maxLines,
+    this.maxLenght,
     this.txtInputAction,
+    this.padding,
+    this.txtCapitalization,
+    this.suffixIcon,
+    this.obscureTxt,
+    this.inputFormatter,
+    this.validator,
   }) : super(key: key);
 
   @override
@@ -30,14 +44,20 @@ class _CustomFormFieldState extends State<CustomFormField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding:
+          widget.padding ?? EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: TextFormField(
+        validator: widget.validator,
+        inputFormatters: widget.inputFormatter,
+        obscureText: widget.obscureTxt ?? false,
+        textCapitalization: widget.txtCapitalization ?? TextCapitalization.none,
         textInputAction: widget.txtInputAction,
-        maxLength: widget.MaxLenght,
-        maxLines: widget.MaxLines ?? 1,
+        maxLength: widget.maxLenght,
+        maxLines: widget.maxLines ?? 1,
         keyboardType: widget.keyboardType,
         controller: widget.controller,
         decoration: InputDecoration(
+          suffixIcon: widget.suffixIcon,
           hintText: widget.hintTxt,
           floatingLabelBehavior: FloatingLabelBehavior.always,
           labelText: widget.labelTxt,
