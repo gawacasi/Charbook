@@ -1,4 +1,4 @@
-# finance_app
+# Charbank_app
 
 A new Flutter project.
 
