@@ -16,6 +16,7 @@ class CustomFormField extends StatefulWidget {
   final bool? obscureTxt;
   final List<TextInputFormatter>? inputFormatter;
   final FormFieldValidator<String>? validator;
+  
 
   const CustomFormField({
     Key? key,

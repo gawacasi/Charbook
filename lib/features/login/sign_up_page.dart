@@ -33,7 +33,9 @@ class _signUpPageState extends State<signUpPage> {
               children: [
                 CustomFormField(
                   validator: (value) {
-                    print(value);
+                    if (value != null && value.isEmpty) {
+                      return "Esse campo não pode ser vazio";
+                    }
                     return null;
                   },
                   inputFormatter: [
@@ -44,17 +46,31 @@ class _signUpPageState extends State<signUpPage> {
                 ),
                 CustomFormField(
                   validator: (value) {
-                    print(value);
+                    if (value != null && value.isEmpty) {
+                      return "Esse campo não pode ser vazio";
+                    }
                     return null;
                   },
                   hintTxt: "pipipi@popopo.com",
                   labelTxt: "EMAIL",
                 ),
                 PasswordFormField(
+                  validator: (value) {
+                    if (value != null && value.isEmpty) {
+                      return "Esse campo não pode ser vazio";
+                    }
+                    return null;
+                  },
                   hintTxt: "*********",
                   labelTxt: "SENHA",
                 ),
                 PasswordFormField(
+                  validator: (value) {
+                    if (value != null && value.isEmpty) {
+                      return "Esse campo não pode ser vazio";
+                    }
+                    return null;
+                  },
                   hintTxt: "*********",
                   labelTxt: "CONFIRME SUA SENHA",
                 )
@@ -68,8 +84,13 @@ class _signUpPageState extends State<signUpPage> {
               child: customBtt(
                 text: 'Cadastre-se',
                 onPressed: () {
-                  final valid = _formKey.currentState?.validate();
-                  print(valid.toString());
+                  final valid = _formKey.currentState != null &&
+                      _formKey.currentState!.validate();
+                  if (valid) {
+                    print("Continuar");
+                  } else {
+                    print("erro");
+                  }
                 },
               ),
             ),
