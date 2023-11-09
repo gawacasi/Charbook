@@ -1,5 +1,5 @@
-import 'package:finance_app/common/variables/app_colors.dart';
-//import 'package:finance_app/common/variables/app_txtstyles.dart';
+import 'package:Charbook/common/variables/app_colors.dart';
+//import 'package:Charbook/common/variables/app_txtstyles.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {

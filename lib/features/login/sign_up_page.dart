@@ -1,11 +1,9 @@
-import 'dart:math';
-
-import 'package:finance_app/common/variables/app_txtstyles.dart';
-import 'package:finance_app/widgets/customFormField.dart';
-import 'package:finance_app/widgets/customTextbtt.dart';
-import 'package:finance_app/widgets/custombtt.dart';
-import 'package:finance_app/widgets/passwordFormField.dart';
-import 'package:finance_app/widgets/uppercaseTxt.dart';
+import 'package:Charbook/common/variables/app_txtstyles.dart';
+import 'package:Charbook/widgets/customFormField.dart';
+import 'package:Charbook/widgets/customTextbtt.dart';
+import 'package:Charbook/widgets/custombtt.dart';
+import 'package:Charbook/widgets/passwordFormField.dart';
+import 'package:Charbook/widgets/uppercaseTxt.dart';
 import 'package:flutter/material.dart';
 
 class signUpPage extends StatefulWidget {
@@ -25,7 +23,7 @@ class _signUpPageState extends State<signUpPage> {
         children: [
           Image.asset(
             'assets/images/Charmander.png',
-            height: 130,
+            height: 110,
           ),
           Form(
             key: _formKey,
@@ -55,6 +53,8 @@ class _signUpPageState extends State<signUpPage> {
                   labelTxt: "EMAIL",
                 ),
                 PasswordFormField(
+                  helperTxt:
+                      "A senha deve conter:\n *Letra maiuscula\n *Numero\n *Caractere especial",
                   validator: (value) {
                     if (value != null && value.isEmpty) {
                       return "Esse campo não pode ser vazio";
@@ -82,7 +82,7 @@ class _signUpPageState extends State<signUpPage> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50),
               child: customBtt(
-                text: 'Cadastre-se',
+                text: 'Finalizar',
                 onPressed: () {
                   final valid = _formKey.currentState != null &&
                       _formKey.currentState!.validate();

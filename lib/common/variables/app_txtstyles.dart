@@ -1,4 +1,4 @@
-import 'package:finance_app/common/variables/app_colors.dart';
+import 'package:Charbook/common/variables/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 

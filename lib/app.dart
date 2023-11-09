@@ -1,8 +1,8 @@
-import 'package:finance_app/common/themes/theme.dart';
-import 'package:finance_app/common/variables/app_colors.dart';
-import 'package:finance_app/features/login/sign_up_page.dart';
-import 'package:finance_app/features/onboarding/onboarding_page.dart';
-import 'package:finance_app/features/splash/splash_page.dart';
+import 'package:Charbook/common/themes/theme.dart';
+import 'package:Charbook/common/variables/app_colors.dart';
+import 'package:Charbook/features/login/sign_up_page.dart';
+import 'package:Charbook/features/onboarding/onboarding_page.dart';
+import 'package:Charbook/features/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {

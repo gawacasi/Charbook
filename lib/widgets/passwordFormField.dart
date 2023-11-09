@@ -1,4 +1,4 @@
-import 'package:finance_app/widgets/customFormField.dart';
+import 'package:Charbook/widgets/customFormField.dart';
 import 'package:flutter/material.dart';
 
 class PasswordFormField extends StatefulWidget {
@@ -7,6 +7,7 @@ class PasswordFormField extends StatefulWidget {
   final TextEditingController? controller;
   final EdgeInsetsGeometry? padding;
   final FormFieldValidator<String>? validator;
+  final String? helperTxt;
 
   const PasswordFormField({
     super.key,
@@ -15,6 +16,7 @@ class PasswordFormField extends StatefulWidget {
     this.hintTxt,
     this.labelTxt,
     this.validator,
+    this.helperTxt,
   });
 
   @override
@@ -27,6 +29,7 @@ class _PasswordFormFieldState extends State<PasswordFormField> {
   @override
   Widget build(BuildContext context) {
     return CustomFormField(
+      helperTxt: widget.helperTxt,
       validator: widget.validator,
       obscureTxt: visibilityBttStatus,
       controller: widget.controller,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:finance_app/common/variables/app_txtstyles.dart';
+import 'package:Charbook/common/variables/app_txtstyles.dart';
 
 class CustomTxtBtt extends StatelessWidget {
   final VoidCallback? onPressed;

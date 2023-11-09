@@ -1,7 +1,7 @@
-import 'package:finance_app/widgets/customTextbtt.dart';
-import 'package:finance_app/common/variables/app_txtstyles.dart';
+import 'package:Charbook/widgets/customTextbtt.dart';
+import 'package:Charbook/common/variables/app_txtstyles.dart';
 import 'package:flutter/material.dart';
-import 'package:finance_app/widgets/custombtt.dart';
+import 'package:Charbook/widgets/custombtt.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
@@ -9,7 +9,7 @@ class OnboardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 236, 236),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: Align(
         child: Column(
           children: [
@@ -18,7 +18,7 @@ class OnboardingPage extends StatelessWidget {
             ),
             Expanded(
               child: Image.asset(
-                'assets/images/Charmander.png',
+                'assets/images/charmander-Livrinho.png',
               ),
             ),
             const SizedBox(
@@ -29,11 +29,11 @@ class OnboardingPage extends StatelessWidget {
               style: AppTxtStyles.charTxt,
             ),
             const Text(
-              "Queime seu crédito",
+              "Queime seus livros",
               style: AppTxtStyles.charTxt,
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 13.0),
+              padding: const EdgeInsets.only(top: 13.0, left: 40, right: 40),
               child: customBtt(
                 text: 'Cadastre-se',
                 onPressed: () => {},

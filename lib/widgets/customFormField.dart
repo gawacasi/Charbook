@@ -1,4 +1,4 @@
-import 'package:finance_app/common/variables/app_colors.dart';
+import 'package:Charbook/common/variables/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -16,7 +16,7 @@ class CustomFormField extends StatefulWidget {
   final bool? obscureTxt;
   final List<TextInputFormatter>? inputFormatter;
   final FormFieldValidator<String>? validator;
-  
+  final String? helperTxt;
 
   const CustomFormField({
     Key? key,
@@ -33,6 +33,7 @@ class CustomFormField extends StatefulWidget {
     this.obscureTxt,
     this.inputFormatter,
     this.validator,
+    this.helperTxt,
   }) : super(key: key);
 
   @override
@@ -58,6 +59,7 @@ class _CustomFormFieldState extends State<CustomFormField> {
         keyboardType: widget.keyboardType,
         controller: widget.controller,
         decoration: InputDecoration(
+          helperText: widget.helperTxt,
           suffixIcon: widget.suffixIcon,
           hintText: widget.hintTxt,
           floatingLabelBehavior: FloatingLabelBehavior.always,

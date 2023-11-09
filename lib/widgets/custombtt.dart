@@ -1,5 +1,5 @@
-import 'package:finance_app/common/variables/app_colors.dart';
-import 'package:finance_app/common/variables/app_txtstyles.dart';
+import 'package:Charbook/common/variables/app_colors.dart';
+import 'package:Charbook/common/variables/app_txtstyles.dart';
 import 'package:flutter/material.dart';
 
 class customBtt extends StatelessWidget {
@@ -15,8 +15,9 @@ class customBtt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      color: Color.fromARGB(255, 255, 255, 255),
       child: Ink(
-        height: 56.0,
+        height: 53.0,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(25)),
           gradient: LinearGradient(
