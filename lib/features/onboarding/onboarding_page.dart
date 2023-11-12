@@ -25,7 +25,7 @@ class OnboardingPage extends StatelessWidget {
               height: 20.0,
             ),
             const Text(
-              "Charbank",
+              "Charbook",
               style: AppTxtStyles.charTxt,
             ),
             const Text(
